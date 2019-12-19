@@ -30,14 +30,14 @@ class PostList extends Component {
     render() {
        let posts = this.state.posts.map(post => {
             return (
-                <Post btnText="Read More" click={() => this.getMoreInfo(post.id)} date={post.dateNow} key={post.id} title={post.title}/>
+                <Post btnText="Read More >>" click={() => this.getMoreInfo(post.id)} date={post.dateNow} key={post.id} title={post.title}/>
             )
         });
         if(this.state.loading){
             posts = <Spinner/>;
         }
         return (
-            <div className="container mt-3">
+            <div className="mt-3">
                 {posts}
             </div>
         );
